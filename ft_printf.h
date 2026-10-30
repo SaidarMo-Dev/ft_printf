@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 09:30:05 by msaidar           #+#    #+#             */
-/*   Updated: 2026/10/29 23:04:58 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/10/29 23:21:55 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdint.h>
 
 typedef int	(*t_handler)(va_list *ap);
+
+typedef struct s_conv
+{
+	char		letter;
+	t_handler	handler;
+}	t_conv;
 
 int		ft_printf(const char *format, ...);
 int		ft_walk(const char *format, va_list *ap);

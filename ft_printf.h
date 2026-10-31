@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 09:30:05 by msaidar           #+#    #+#             */
-/*   Updated: 2026/10/29 23:21:55 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/10/30 09:48:45 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stdio.h>
 
 typedef int	(*t_handler)(va_list *ap);
 

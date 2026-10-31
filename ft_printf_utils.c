@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:02:27 by msaidar           #+#    #+#             */
-/*   Updated: 2026/10/29 23:06:09 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/10/30 09:56:11 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen_pf(const char *s)
 	int	len;
 
 	len = 0;
-	while (*s)
+	while (*s++)
 		len++;
 	return (len);
 }

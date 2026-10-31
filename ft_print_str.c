@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:58:37 by msaidar           #+#    #+#             */
-/*   Updated: 2026/10/29 14:22:15 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/10/31 09:54:51 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_print_str(va_list *ap)
 	char	*s;
 
 	s = va_arg(*ap, char *);
+	if (!s)
+		return (ft_putstr_count("(null)", 6));
 	len = ft_strlen_pf(s);
 	return (ft_putstr_count(s, len));
 }

@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 00:13:23 by msaidar           #+#    #+#             */
-/*   Updated: 2026/10/30 09:51:02 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/10/31 09:57:39 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_walk(const char *format, va_list *ap)
 	i = 0;
 	while (format[i])
 	{
-		
 		if (format[i] != '%')
 		{
 			if (ft_putchar_count(format[i]) == -1)

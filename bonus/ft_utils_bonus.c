@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/04 14:58:17 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/04 18:45:09 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,11 @@ int	ft_putstr_count(const char *s, size_t len)
 	if (count == -1)
 		return (-1);
 	return (count);
+}
+
+int	max_int(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
 }

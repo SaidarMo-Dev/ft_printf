@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/04 14:54:03 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/04 19:39:56 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ typedef int	(*t_handler)(const t_spec *spec, va_list *ap);
 int		ft_printf(const char *format, ...);
 int		ft_walk(const char *format, va_list *ap);
 
-void	init_spec(t_spec *spec);
 int		parse_flags(const char *s, t_spec *spec);
 int		parse_width(const char *s, t_spec *spec);
 int		parse_prec(const char *s, t_spec *spec);

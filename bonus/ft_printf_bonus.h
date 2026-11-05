@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 15:49:30 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/05 20:52:23 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int		put_pad(char c, int n);
 int		max_int(int a, int b);
 int		is_inflags(char c);
 void	set_flag(t_spec *spec, char flag);
+int		print_width(int widht);
 
 int		ft_putunbr_base(unsigned long long n, unsigned int base,
 			const char *digits);

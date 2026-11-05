@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:27:29 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 14:46:20 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/05 21:06:27 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,19 @@ void	set_flag(t_spec *spec, char flag)
 		spec->hash = 1;
 	else if (flag == 32)
 		spec->space = 1;
+}
+
+int	put_pad(char c, int n)
+{
+	int	count;
+
+	count = 0;
+	while (n > 0)
+	{
+		if (ft_putchar_count(c) == -1)
+			return (-1);
+		count++;
+		n--;
+	}
+	return (count);
 }

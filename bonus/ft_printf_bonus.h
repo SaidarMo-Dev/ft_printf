@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/04 19:39:56 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/05 15:49:30 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ typedef struct s_num
 
 typedef int	(*t_handler)(const t_spec *spec, va_list *ap);
 
+typedef struct s_conv
+{
+	char		letter;
+	t_handler	handler;
+}	t_conv;
+
 int		ft_printf(const char *format, ...);
 int		ft_walk(const char *format, va_list *ap);
 
@@ -72,6 +78,8 @@ int		ft_putstr_count(const char *s, size_t len);
 size_t	ft_strlen_pf(const char *s);
 int		put_pad(char c, int n);
 int		max_int(int a, int b);
+int		is_inflags(char c);
+void	set_flag(t_spec *spec, char flag);
 
 int		ft_putunbr_base(unsigned long long n, unsigned int base,
 			const char *digits);

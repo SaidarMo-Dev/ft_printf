@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/06 11:24:55 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 14:14:24 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,14 @@ typedef struct s_num
 	const char			*digits;
 	const char			*prefix;
 }	t_num;
+
+typedef struct s_layout
+{
+	int	digits;
+	int	zeros;
+	int	pad;
+	int	prefix_len;
+}	t_layout;
 
 typedef int	(*t_handler)(const t_spec *spec, va_list *ap);
 
@@ -83,10 +91,11 @@ int		is_inflags(char c);
 void	set_flag(t_spec *spec, char flag);
 int		print_width(int widht);
 int		add_count(int *total, int res);
-int		count_hexdigits(uintptr_t value);
 
 int		ft_putunbr_base(unsigned long long n, unsigned int base,
 			const char *digits);
 int		count_digits(unsigned long long n, unsigned int base);
+
+void	compute_layout(const t_spec *spec, const t_num *num, t_layout *lay);
 
 #endif

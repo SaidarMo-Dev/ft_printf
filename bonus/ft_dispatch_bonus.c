@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 15:45:09 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 15:50:31 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 18:14:19 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ static const t_conv	*initialize_table(void)
 	g_table[0] = (t_conv){'c', ft_print_char};
 	g_table[1] = (t_conv){'s', ft_print_str};
 	g_table[2] = (t_conv){'p', ft_print_ptr};
-	g_table[3] = (t_conv){'d', ft_print_int};
-	g_table[4] = (t_conv){'i', ft_print_int};
-	g_table[5] = (t_conv){'u', ft_print_uint};
-	g_table[6] = (t_conv){'x', ft_print_hex_lower};
-	g_table[7] = (t_conv){'X', ft_print_hex_upper};
-	g_table[8] = (t_conv){'%', ft_print_percent};
-	g_table[9] = (t_conv){0, NULL};
+	// g_table[3] = (t_conv){'d', ft_print_int};
+	// g_table[4] = (t_conv){'i', ft_print_int};
+	// g_table[5] = (t_conv){'u', ft_print_uint};
+	// g_table[6] = (t_conv){'x', ft_print_hex_lower};
+	// g_table[7] = (t_conv){'X', ft_print_hex_upper};
+	g_table[3] = (t_conv){'%', ft_print_percent};
+	g_table[4] = (t_conv){0, NULL};
 	return (g_table);
 }
 

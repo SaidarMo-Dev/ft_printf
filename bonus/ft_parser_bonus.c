@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 18:46:42 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 15:14:14 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 18:12:26 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	parse_flags(const char *s, t_spec *spec)
 	{
 		set_flag(spec, *s);
 		count++;
-		s++;
+		s++;	
 	}
 	return (count);
 }

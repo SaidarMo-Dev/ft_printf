@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/06 11:23:06 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 14:01:06 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ int	max_int(int a, int b)
 	return (b);
 }
 
-int	count_hexdigits(uintptr_t value)
+int	count_digits(unsigned long long n, unsigned int base)
 {
 	int	count;
 
 	count = 1;
-	while (value > 16)
+	while (n > base)
 	{
-		value = value / 16;
+		n = n / 16;
 		count++;
 	}
 	return (count);

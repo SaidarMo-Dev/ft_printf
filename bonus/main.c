@@ -1,6 +1,6 @@
-#include "stdio.h"
+#include <stdio.h>
 
-int main(void)
+int main()
 {
-        printf("%2c", 'c');
+        printf("%+.10p", "test");
 }

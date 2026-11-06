@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:27:29 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 21:06:27 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 09:18:08 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,28 @@ int	put_pad(char c, int n)
 		n--;
 	}
 	return (count);
+}
+
+int	add_count(int *total, int res)
+{
+	if (res == -1)
+		return (-1);
+	*total += res;
+	return (0);
+}
+
+int	ft_print_field(const t_spec *spec, const char *s, int len)
+{
+	int	pad;
+	int	total;
+
+	total = 0;
+	pad = spec->width - len;
+	if (!spec->minus && add_count(&total, put_pad(' ', pad)) == -1)
+		return (-1);
+	if (add_count(&total, ft_putstr_count(s, len)) == -1)
+		return (-1);
+	if (spec->minus && add_count(&total, put_pad(' ', pad)) == -1)
+		return (-1);
+	return (total);
 }

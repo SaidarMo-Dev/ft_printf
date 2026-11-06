@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/05 20:52:23 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/06 11:24:55 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdint.h>
 
 # define HEX_LOWER "0123456789abcdef"
 # define HEX_UPPER "0123456789ABCDEF"
@@ -71,7 +72,7 @@ int		ft_print_hex_upper(const t_spec *spec, va_list *ap);
 int		ft_print_ptr(const t_spec *spec, va_list *ap);
 
 int		ft_print_num(const t_spec *spec, const t_num *num);
-int		ft_print_field(const t_spec *spec, const char *s, size_t len);
+int		ft_print_field(const t_spec *spec, const char *s, int len);
 
 int		ft_putchar_count(char c);
 int		ft_putstr_count(const char *s, size_t len);
@@ -81,6 +82,8 @@ int		max_int(int a, int b);
 int		is_inflags(char c);
 void	set_flag(t_spec *spec, char flag);
 int		print_width(int widht);
+int		add_count(int *total, int res);
+int		count_hexdigits(uintptr_t value);
 
 int		ft_putunbr_base(unsigned long long n, unsigned int base,
 			const char *digits);

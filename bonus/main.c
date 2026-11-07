@@ -3,8 +3,8 @@
 
 int main()
 {
-        int b = printf("%+.10p\n", 25);
-        int a = ft_printf("%+.10p\n", 25);
+        int b = printf("%19p\n", 255);
+        int a = ft_printf("%19p\n", 255);
       
 
         printf("a =%d\n", a);

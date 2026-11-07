@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:26:17 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/06 14:14:24 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/07 08:59:19 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ int		ft_putunbr_base(unsigned long long n, unsigned int base,
 int		count_digits(unsigned long long n, unsigned int base);
 
 void	compute_layout(const t_spec *spec, const t_num *num, t_layout *lay);
-
+int		ft_render_num(const t_spec *spec, const t_num *num,
+			const t_layout *lay);
 #endif

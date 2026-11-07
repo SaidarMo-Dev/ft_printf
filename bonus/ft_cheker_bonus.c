@@ -6,7 +6,7 @@
 /*   By: msaidar <msaidar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 14:15:33 by msaidar           #+#    #+#             */
-/*   Updated: 2026/11/06 19:36:02 by msaidar          ###   ########.fr       */
+/*   Updated: 2026/11/07 09:02:22 by msaidar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	compute_layout(const t_spec *spec, const t_num *num, t_layout *lay)
 int	ft_render_num(const t_spec *spec, const t_num *num, const t_layout *lay)
 {
 	int	total;
-	printf("count=%d", lay->digits);
 	total = 0;
 	if (!spec->minus && add_count(&total, put_pad(' ', lay->pad)) == -1)
 		return (-1);
